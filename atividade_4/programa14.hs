@@ -5,8 +5,8 @@ mdc x y = if y == 0
           else
           	    mdc y (x`mod`y)
 
-calcula :: Int -> Int -> Int
-calcula x y = if (x*y)`div`(mdc x y) == 1
+calcula :: Int -> Int -> String
+calcula x y = if (mdc x y) == 1
 	then 
 		"Coprimos"
 	else
