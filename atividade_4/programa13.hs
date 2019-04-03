@@ -2,16 +2,11 @@ mdc :: Int -> Int -> Int
 mdc x y = if y == 0
 			then 
 				x
-          else
+            else
           	    mdc y (x`mod`y)
 
 calcula :: Int -> Int -> Int
-calcula x y = if (x*y)`div`(mdc x y) == 1
-	then 
-		"Coprimos"
-	else
-		"Nao coprimos"	
-
+calcula x y = (x*y)`div`(mdc x y)
 
 main = do
 	putStrLn "Digite o valor de x: "
